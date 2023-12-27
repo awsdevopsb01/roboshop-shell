@@ -18,4 +18,4 @@ cd roboshop-shell
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 dnf install mongodb-org-shell -y
 
-mongo --host mongodb.nldevopsb01.online </app/schema/catalogue.js
+mongo --host mongodb-dev.nldevopsb01.online </app/schema/catalogue.js
