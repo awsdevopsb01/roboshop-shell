@@ -5,7 +5,7 @@ dnf module enable nodejs:18 -y
 echo -e "************\e[36m Install Nodejs *********\e[0m"
 dnf install nodejs -y
 
-echo -e "************\e[36m Add Funtional User *********\e[0m"
+echo -e "************\e[36m Add Functional User *********\e[0m"
 useradd roboshop
 
 echo -e "************\e[36m Create app directory *********\e[0m"
@@ -35,3 +35,5 @@ dnf install mongodb-org-shell -y
 
 echo -e "************\e[36m Load Mongodb *********\e[0m"
 mongo --host mongodb-dev.nldevopsb01.online </app/schema/catalogue.js
+
+systemctl restart catalogue
