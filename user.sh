@@ -35,4 +35,4 @@ cd roboshop-shell
 cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
 dnf install mongodb-org-shell -y
 
-mongo --host mongdb.nldevopsb01.online </app/schema/user.js
+mongo --host mongdb-dev.nldevopsb01.online </app/schema/user.js
