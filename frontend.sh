@@ -5,9 +5,6 @@ echo -e "************\e[36m Enable & Start NGINX ************\e[0m"
 systemctl enable nginx
 systemctl start nginx
 
-echo -e "************\e[36m Copy Roboshop Config file ************\e[0m"
-cp roboshop.conf /etc/nginx/default.d/
-
 echo -e "************\e[36m Remove default html files ************\e[0m"
 rm -rf /usr/share/nginx/html/*
 
@@ -17,6 +14,9 @@ cd /usr/share/nginx/html
 
 echo -e "************\e[36m Unzip frontend files ************\e[0m"
 unzip /tmp/frontend.zip
+
+echo -e "************\e[36m Copy Roboshop Config file ************\e[0m"
+cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "************\e[36m ReStart NGINX ************\e[0m"
 systemctl restart nginx

@@ -1,5 +1,4 @@
 echo -e "************\e[36m Correct NodeJs version ************\e[0m"
-
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 
