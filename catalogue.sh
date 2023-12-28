@@ -2,7 +2,7 @@ echo -e "************\e[36m Set correct Nodejs version *********\e[0m"
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 
-echo -e "************\e[36m Install Nodejs *********\e[0m"
+echo -e "************\e[36m Install Nodejs ************\e[0m"
 dnf install nodejs -y
 
 echo -e "************\e[36m Add Functional User *********\e[0m"
