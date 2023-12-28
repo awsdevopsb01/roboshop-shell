@@ -23,6 +23,15 @@ unzip /tmp/user.zip
 echo -e "************\e[36m Install dependencies ************\e[0m"
 npm install
 
+echo -e "************\e[36m Create mongodb repo ************\e[0m"
+cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
+
+echo -e "************\e[36m Install mongodb ************\e[0m"
+dnf install mongodb-org-shell -y
+
+echo -e "************\e[36m Load Mongodb data ************\e[0m"
+mongo --host mongdb-dev.nldevopsb01.online </app/schema/user.js
+
 echo -e "************\e[36m Create User Service ************\e[0m"
 cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service
 
@@ -30,9 +39,3 @@ echo -e "************\e[36m Create Enable and start ************\e[0m"
 systemctl daemon-reload
 systemctl enable user
 systemctl restart user
-
-cd roboshop-shell
-cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
-dnf install mongodb-org-shell -y
-
-mongo --host mongdb-dev.nldevopsb01.online </app/schema/user.js
