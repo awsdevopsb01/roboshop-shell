@@ -32,7 +32,7 @@ systemctl enable user
 systemctl restart user
 
 cd roboshop-shell
-cp mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
 dnf install mongodb-org-shell -y
 
 mongo --host mongdb.nldevopsb01.online </app/schema/user.js
