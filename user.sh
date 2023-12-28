@@ -30,7 +30,7 @@ echo -e "************\e[36m Install mongodb ************\e[0m"
 dnf install mongodb-org-shell -y
 
 echo -e "************\e[36m Load Mongodb data ************\e[0m"
-mongo --host mongdb-dev.nldevopsb01.online </app/schema/user.js
+mongo --host mongodb-dev.nldevopsb01.online </app/schema/user.js
 
 echo -e "************\e[36m Create User Service ************\e[0m"
 cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service
