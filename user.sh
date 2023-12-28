@@ -10,6 +10,7 @@ echo -e "************\e[36m Create Functional User ************\e[0m"
 useradd roboshop
 
 echo -e "************\e[36m Create App directory ************\e[0m"
+rm -rf /app
 mkdir /app
 
 echo -e "************\e[36m Download app content ************\e[0m"
